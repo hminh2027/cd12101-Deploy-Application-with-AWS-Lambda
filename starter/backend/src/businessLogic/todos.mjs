@@ -18,7 +18,7 @@ export async function createTodo(createTodoRequest, userId) {
     attachmentUrl: createTodoRequest.attachmentUrl,
     dueDate: createTodoRequest.dueDate,
     createdAt: new Date().toISOString,
-    name: createTodoRequest.name,
+    tname: createTodoRequest.name,
     done: false
   })
 }
@@ -27,7 +27,7 @@ export async function updateTodo(todoId, updateTodoRequest, userId) {
   return await todoAccess.updateTodo(
     todoId,
     {
-      name: updateTodoRequest.name,
+      tname: updateTodoRequest.name,
       dueDate: updateTodoRequest.dueDate,
       done: updateTodoRequest.done
     },

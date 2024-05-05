@@ -59,10 +59,10 @@ export class TodoAccess {
       TableName: this.todosTable,
       Key: { todoId, userId },
       // Item: todo,
-      UpdateExpression: 'set name = :n, dueDate = :due, done = :dn',
+      UpdateExpression: 'set tname = :n, dueDate = :due, done = :dn',
       ConditionExpression: 'attribute_exists(todoId)',
       ExpressionAttributeValues: {
-        ':n': todo.name,
+        ':n': todo.tname,
         ':due': todo.dueDate,
         ':dn': todo.done
       }
