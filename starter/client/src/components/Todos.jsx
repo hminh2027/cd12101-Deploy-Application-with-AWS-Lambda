@@ -38,7 +38,7 @@ export function Todos() {
                 />
               </Grid.Column>
               <Grid.Column width={10} verticalAlign="middle">
-                {todo?.name}
+                {todo?.tname}
               </Grid.Column>
               <Grid.Column width={3} floated="right">
                 {todo?.dueDate}
@@ -95,7 +95,7 @@ export function Todos() {
         scope: 'write:todo'
       })
       await patchTodo(accessToken, todo.todoId, {
-        name: todo.name,
+        name: todo.tname,
         dueDate: todo.dueDate,
         done: !todo.done
       })
