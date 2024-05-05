@@ -18,7 +18,7 @@ provider:
   region: ${opt:region, 'us-east-1'}
 
   environment:
-    TODOS_TABLE: minhvh5-Todos-107042813816-${self:provider.stage}
+    TODOS_TABLE: Todos-107042813816-${self:provider.stage}
     TODOS_USER_INDEX: TodosUserIndex
     ATTACHMENT_S3_BUCKET: minhvh5-attachments-107042813816-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
@@ -151,7 +151,7 @@ resources:
         ResponseParameters:
           gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
           gatewayresponse.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
-          gatewayresponse.header.Access-Control-Allow-Methods: "'GET,OPTIONS,POST'"
+          gatewayresponse.header.Access-Control-Allow-Methods: "'GET,OPTIONS,POST,PATCH,DELETE'"
         ResponseType: DEFAULT_4XX
         RestApiId:
           Ref: ApiGatewayRestApi
